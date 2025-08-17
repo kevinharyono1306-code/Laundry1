@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+}
+
+/* Navbar */
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover, nav a.active {
+    color: #ffcc00;
+}
+
+/* Halaman Home */
+.hero {
+    text-align: left;
+    padding: 50px;
+}
+.profile-img {
+    width: 350px;
+    border-radius: 100%;
+    animation: bounce 2s infinite;
+}
+
+/* Animasi bounce */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animasi fade in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Animasi fade up */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s forwards;
+}
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Galeri */
+.gallery {
+    text-align: center;
+    padding: 30px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.grid img:hover {
+    transform: scale(1.05);
+}
